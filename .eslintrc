@@ -1,0 +1,10 @@
+{
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "mocha": true
+  },
+  "plugins": [
+    "standard"
+  ]
+}

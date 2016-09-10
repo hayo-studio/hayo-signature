@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: rgb(214,190,150);
+      margin: 0
+    }
+    .qrcode{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input id="uid" type="text" placeholder="uid" value="20">
+    <input id="username" type="text" placeholder="username" value="outsidero">
+    <input id="color" type="text" placeholder="color" value="rgb(26,170,235)">
+    <button id="genBtn">生成</button>
+  </div>
+  <div>
+    <canvas id="canvas" width="600" height="110"></canvas>
+    <img id="qrcode" class="qrcode" src="./assets/417667844.png">
+  </div>
+</body>
+<script src="./main.js"></script>
+</html>
