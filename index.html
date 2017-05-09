@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>签名档生成</title>
   <style>
     body{
       background-color: rgb(214,190,150);
-      margin: 0
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    body, html {
+      height: 100%
+    }
+    div {
+      text-align: center;
+      margin: 8px
+    }
+    spacer {
+      display: block;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
     }
     .qrcode{
       display: none;
@@ -14,6 +29,7 @@
   </style>
 </head>
 <body>
+  <spacer></spacer>
   <div>
     <input id="uid" type="text" placeholder="uid" value="20">
     <input id="username" type="text" placeholder="username" value="outsidero">
@@ -22,8 +38,9 @@
   </div>
   <div>
     <canvas id="canvas" width="600" height="110"></canvas>
-    <img id="qrcode" class="qrcode" src="./assets/417667844.png">
+    <img id="qrcode" class="qrcode" src="./assets/qrcode.png">
   </div>
+  <spacer></spacer>
 </body>
 <script src="./main.js"></script>
 </html>

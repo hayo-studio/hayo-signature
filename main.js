@@ -2,12 +2,15 @@ const defaultColor = 'rgb(11,164,231)'
 
 const genBtn = document.getElementById('genBtn')
 
-genBtn.addEventListener('click', function () {
+genBtn.addEventListener('click', draw)
+draw()
+
+function draw() {
   const uid = document.getElementById('uid').value
   const username = document.getElementById('username').value
   const color = document.getElementById('color').value
   drawSignature(uid, username, color)
-})
+}
 
 // 绘制签名档
 function drawSignature (uid, username, color) {
@@ -176,12 +179,12 @@ function drawInfo (ctx, x, y, color, uid, username) {
 
   const qrcode = document.getElementById('qrcode')
   ctx.imageSmoothingEnabled = false
-  ctx.drawImage(qrcode, 510, 20)
+  ctx.drawImage(qrcode, 505, 15, 90, 90)
 
   ctx.fillStyle = 'rgb(180,180,180)'
   ctx.font = '12px Microsoft Yahei'
   ctx.fillText('HAYO Studio', 425, 85)
-  ctx.fillText('审核群', 465, 100)
+  ctx.fillText('交流&审核群', 430, 100)
 }
 
 // 绘制普通多边形
